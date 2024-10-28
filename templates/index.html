@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Ip INfo Tool</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Main background color */
+        body {
+            background-color: #4B5320; /* Army green */
+            color: #f0f0f0; /* Light text color */
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        /* Container styling */
+        .container {
+            background-color: #3b3f2d;
+            padding: 30px 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #ffd700;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 1.1em;
+            margin-right: 10px;
+        }
+
+        /* Input field styling */
+        input[type="text"] {
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+            width: calc(100% - 22px);
+            margin-bottom: 15px;
+        }
+
+        /* Button styling */
+        button {
+            background-color: #ffd700;
+            color: #3b3f2d;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #f5d442;
+        }
+
+        /* Icon styling */
+        .icon {
+            color: #ffd700;
+            font-size: 1.2em;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Enter a Domain to Lookup</h1>
+        <form action="/lookup" method="post">
+            <label for="domain">Domain:</label>
+            <input type="text" id="domain" name="domain" required>
+            <button type="submit"><i class="fas fa-paper-plane"></i> Submit</button>
+        </form>
+    </div>
+</body>
+</html>
+
