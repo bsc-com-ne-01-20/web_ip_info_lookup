@@ -9,7 +9,7 @@
         /* Main background color */
         body {
             background-color: #4B5320; /* Army green */
-            color: #f0f0f0; /* Light text color */
+            color: #f0f0f0;
             font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
@@ -27,6 +27,7 @@
             max-width: 600px;
             width: 100%;
             text-align: center;
+            margin-bottom: 20px;
         }
 
         h1 {
@@ -55,20 +56,67 @@
             display: inline-block;
         }
 
-        a:hover {
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            width: 100%;
+        }
+
+        .footer-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-links, .footer-social {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+
+        .footer-links li, .footer-social li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .footer-links a, .footer-social a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        .footer-social a:hover, .footer-links a:hover {
             color: #fff;
+        }
+
+        .footer-social a i {
+            font-size: 1.2em;
         }
     </style>
 </head>
 <body>
+
+    <!-- Results Container -->
     <div class="container">
-        <h1>Lookup Result for <span style="color: #ffd700;">{{ domain }}</span></h1>
-        <p><i class="fas fa-globe icon"></i>IP Address: {{ ip_address }}</p>
-        <p><i class="fas fa-map-marker-alt icon"></i>Location: {{ city }}, {{ region }}, {{ country }}, {{ loc }}</p>
+        <h1><i class="fas fa-info-circle icon"></i>Lookup Result for {{ domain }}</h1>
+        <p><i class="fas fa-map-marker-alt icon"></i>IP Address: {{ ip_address }}</p>
+        <p><i class="fas fa-city icon"></i>Location: {{ city }}, {{ region }}, {{ country }}, {{ loc }}</p>
         <p><i class="fas fa-clock icon"></i>TimeZone: {{ timezone }}</p>
         <p><i class="fas fa-building icon"></i>Organisation: {{ org }}</p>
-        <a href="/"><i class="fas fa-arrow-left"></i> Look up another domain</a>
+        <a href="/">Look up another domain</a>
     </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 Hyssop Satori.</p>
+        
+            <ul class="footer-social">
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/consider-lonjezo-24b949283/"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+
 </body>
 </html>
-

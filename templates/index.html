@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Ip INfo Tool</title>
+    <title>Web ip info lookup</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* Main background color */
@@ -28,6 +28,7 @@
             text-align: center;
             max-width: 400px;
             width: 100%;
+            margin-bottom: 20px;
         }
 
         h1 {
@@ -73,17 +74,69 @@
             font-size: 1.2em;
             margin-right: 5px;
         }
+
+        /* Footer Styling */
+        footer {
+         
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+            width: 100%;
+        }
+
+        .footer-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer-links, .footer-social {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+
+        .footer-links li, .footer-social li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        .footer-links a, .footer-social a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        .footer-social a:hover, .footer-links a:hover {
+            color: #fff;
+        }
+
+        .footer-social a i {
+            font-size: 1.2em;
+        }
     </style>
 </head>
 <body>
+
     <div class="container">
-        <h1>Enter a Domain to Lookup</h1>
+        <h1>Website's Ip Address Information Lookup</h1>
         <form action="/lookup" method="post">
-            <label for="domain">Domain:</label>
+            <label for="domain"><i class="fas fa-search icon"></i>Enter a Domain:</label>
             <input type="text" id="domain" name="domain" required>
             <button type="submit"><i class="fas fa-paper-plane"></i> Submit</button>
         </form>
     </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 Hyssop Satori.</p>
+            
+
+            <ul class="footer-social">
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/consider-lonjezo-24b949283/"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+
 </body>
 </html>
-
